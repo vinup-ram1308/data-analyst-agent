@@ -37,6 +37,17 @@ Cloud Run — ADK Agent Service
                     └── Markdown report generation
 ```
 
+## Design Decisions
+
+The `analyze_csv` tool performs all data computation deterministically using **pandas** — 
+this is intentional. In production agentic systems, deterministic operations (parsing, 
+statistics, formatting) belong in tools, not in the LLM.
+
+**Gemini acts as the intelligent orchestration layer:** it understands user intent, 
+decides when to invoke the tool, passes the correct input, and faithfully returns the 
+structured output. This follows ADK best practices — tools handle *what can be computed 
+precisely*, and the model handles *what requires language understanding and reasoning*.
+
 ## Project Structure
 ```
 data_analyst_agent/
