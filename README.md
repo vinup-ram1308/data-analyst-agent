@@ -128,7 +128,7 @@ E008,Henry Moore,38,Male,Marketing,Marketing Manager,9,88000,4.3,18,2021,False,D
 
 ## Live demo
 
-Cloud Run URL: `https://data-analyst-agent-xxxx.run.app`
+Cloud Run URL: `https://data-analyst-agent-yhmlqfpbzq-uc.a.run.app`
 
 ---
 
