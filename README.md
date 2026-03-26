@@ -39,8 +39,7 @@ Cloud Run — ADK Agent Service
 
 ## Design Decisions
 
-The `analyze_csv` tool performs all data computation deterministically using **pandas** — 
-this is intentional. In production agentic systems, deterministic operations (parsing, 
+The `analyze_csv` tool performs all data computation deterministically using **pandas**. In production agentic systems, deterministic operations (parsing, 
 statistics, formatting) belong in tools, not in the LLM.
 
 **Gemini acts as the intelligent orchestration layer:** it understands user intent, 
